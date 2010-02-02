@@ -1031,7 +1031,7 @@ SC.DateTime.mixin(SC.Comparable,
     // need to move into local time zone for these calculations
     this._setCalcState(start - (timezone * 60000), 0); // so simulate a shifted 'UTC' time
 
-    return format.replace(/\%([aAbBcdHIjmMpSUWwxXyYZ\%])/g, function() {
+    return format.replace(/\%([aAbBcdHiIjmMpSUWwxXyYZ\%])/g, function() {
       var v = that.__toFormattedString.call(that, arguments, start, timezone);
       return v;
     });
